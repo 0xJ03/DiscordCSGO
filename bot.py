@@ -90,7 +90,7 @@ async def case(ctx):
     discord.Embed(title = "Item recieved", description = "Glock-18 - Bullet Queen", color = ctx.author.color),
     discord.Embed(title = "Item recieved", description = "Glock-18 - Bullet Queen", color = ctx.author.color),
     discord.Embed(title = "Item recieved", description = "Glock-18 - Bullet Queen", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 5 :star: Skyward Atlas <:SkywardAtlas:857281156763746364> (Catalyst Weapon).", color = FFD700)]
+    discord.Embed(title = "Item recieved", description = "★ Talon Knife - Marble Fade!", color = ctx.author.color),
     randomitem = random.choice(items)
     await ctx.send(embed=randomitem)
 
