@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import time
+import random
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='.')
@@ -29,17 +30,68 @@ async def help(ctx):
 @commands.cooldown(1, 4, commands.BucketType.user)
 async def case(ctx):
     items = [
-    discord.Embed(title = "Item recieved", description = "You get 3 :star: Ebony Bow <:EbonyBow:857220938571317248> (Bow Weapon).", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 3 :star: Raven Bow <:RavenBow:857221178338574357> (Bow Weapon).", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 3 :star: Recurve Bow <:RecurveBow:857221810932547594> (Bow Weapon).", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 4 :star: Alley Hunter <:AlleyHunter:857262273805287434> (Bow Weapon).", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 4 :star: Blackcliff Warbow <:BlackcliffWarbow:857262272656441345> (Bow Weapon).", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 4 :star: Compound Bow <:CompoundBow:857262272622493736> (Bow Weapon).", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 5 :star: Lost Prayer to the Sacred Winds <:LostPrayertotheSacredWinds:857281184492552213> (Catalyst Weapon).", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 5 :star: Memory of Dust <:MemoryofDust:857281131413635122> (Catalyst Weapon).", color = ctx.author.color),
-    discord.Embed(title = "Item recieved!", description = "You get 5 :star: Skyward Atlas <:SkywardAtlas:857281156763746364> (Catalyst Weapon).", color = ctx.author.color)]
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "You get R8 Revolver - Bone Forged", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "MP5-SD - Desert Strike", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "AWP - Capillary", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "SG 553 - Darkwing", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "Glock-18 - Bullet Queen", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "Glock-18 - Bullet Queen", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "Glock-18 - Bullet Queen", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "Glock-18 - Bullet Queen", color = ctx.author.color),
+    discord.Embed(title = "Item recieved", description = "Glock-18 - Bullet Queen", color = ctx.author.color),
+    discord.Embed(title = "Item recieved!", description = "You get 5 :star: Skyward Atlas <:SkywardAtlas:857281156763746364> (Catalyst Weapon).", color = FFD700)]
     randomitem = random.choice(items)
     await ctx.send(embed=randomitem)
-
 
 bot.run(token)
