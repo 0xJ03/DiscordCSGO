@@ -5,11 +5,23 @@ from discord.ext import commands
 
 bot = commands.Bot(command_prefix='.')
 
-class MyClient(Discord.client):
-    async def on_ready(self):
-        print("Logged on as:", self.user)
+async def main():
+    conn = await asyncpg.connect('postgresql://postgres@localhost/test')
+    await conn.execute('''
+        CREATE TABLE users(
+            id serial PRIMARY KEY,
+            name text,
+            dob date
+        )
+    ''')
+
+@bot.event
+async def on_ready():
+    print('\nLogged in as')
+    print("Bot Name: " + bot.user.name)
+    print("Bot User ID: " + bot.user.id)
     
-@client.command()
+@bot.command()
 async def help(ctx):
     await ctx.send("Use .case to open a case!")
     
